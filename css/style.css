@@ -1,0 +1,80 @@
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Darker-greyish-cyan: hsl(186, 14%, 43%);
+    --Dark-greyish-cyan: hsl(184, 14%, 56%);
+    --Light-greyish-cyan: hsl(185, 41%, 84%);
+    --Lighter-greyish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+    --main-bg: hsl(185, 41%, 84%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+
+
+body {
+    background-color: var(--main-bg);
+    font-family: 'Space Mono', monospace;
+}
+
+.tip-calculator-header {
+    text-align: center;
+    padding: 3rem 0;
+}
+.tip-calculator-header--img {
+    transform: scale(1.2);
+}
+
+main {
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+}
+
+h1 {
+    display: none;
+}
+
+
+@media screen and (min-width: 1000px) {
+    main {
+        max-width: 930px;
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .articles {
+        display: flex;
+    }
+
+
+}
+
+/* Style attribution */
+.attribution {
+    font-size: 11px;
+    color: black;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.attribution a {
+    color: var(--dark-cyan);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: var(--dark-cyan);
+    font-weight: 600;
+}
