@@ -126,6 +126,7 @@ h1 {
     justify-content: space-between;
     align-items: flex-end;
     font-weight: 700;
+    margin-bottom: 2rem;
 }
 
 .output--person {
@@ -162,14 +163,25 @@ h1 {
 @media screen and (min-width: 1000px) {
     main {
         max-width: 930px;
+        margin: auto;
+    }
+    .tip-calculator__form {
         display: flex;
-        align-items: center;
-        height: 100vh;
+    }
+    .userInput {
+        width: calc((100% - 1rem) / 2);
+    }
+    .output {
+        width: calc((100% - 1rem) / 2);
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .output__reset--btn{
+        margin-top: auto;
     }
 
-    .articles {
-        display: flex;
-    }
+
 
 
 }
