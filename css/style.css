@@ -8,6 +8,7 @@
     --Lighter-greyish-cyan: hsl(189, 41%, 97%);
     --white: hsl(0, 0%, 100%);
     --main-bg: hsl(185, 41%, 84%);
+    --error: hsl(0deg 64% 56%);
 
 
 }
@@ -108,11 +109,21 @@ h1 {
 .custon-percentage:placeholder {
     color: var(--Darker-greyish-cyan);
 }
+.userInput__peopleCount__label{
+    display: flex;
+    justify-content: space-between;
+}
 
-
+.warning {
+    color: var(--error);
+}
+.input-warning {
+    border: 1px solid var(--error);
+}
 .no-warning {
     display: none;
 }
+
 
 .output {
     background-color: var(--Very-dark-cyan);
