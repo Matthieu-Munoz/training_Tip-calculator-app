@@ -37,7 +37,6 @@ body {
 }
 
 main {
-    width: 100%;
     padding: 2rem;
     background-color: var(--white);
     border-radius: 2rem;
@@ -109,7 +108,8 @@ h1 {
 .custon-percentage:placeholder {
     color: var(--Darker-greyish-cyan);
 }
-.userInput__peopleCount__label{
+
+.userInput__peopleCount__label {
     display: flex;
     justify-content: space-between;
 }
@@ -117,13 +117,14 @@ h1 {
 .warning {
     color: var(--error);
 }
+
 .input-warning {
     border: 1px solid var(--error);
 }
+
 .no-warning {
     display: none;
 }
-
 
 .output {
     background-color: var(--Very-dark-cyan);
@@ -171,24 +172,35 @@ h1 {
     display: none;
 }
 
-@media screen and (min-width: 1000px) {
-    main {
-        max-width: 930px;
-        margin: auto;
+@media screen and (min-width: 950px) {
+    .wrapper {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
+
+    main {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
     .tip-calculator__form {
         display: flex;
     }
+
     .userInput {
         width: calc((100% - 1rem) / 2);
     }
+
     .output {
         width: calc((100% - 1rem) / 2);
         margin-left: auto;
         display: flex;
         flex-direction: column;
     }
-    .output__reset--btn{
+
+    .output__reset--btn {
         margin-top: auto;
     }
 
