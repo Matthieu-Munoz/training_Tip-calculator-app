@@ -1,5 +1,6 @@
 :root {
     --Strong-cyan: hsl(172, 67%, 45%);
+    --Light-strong-cyan: hsl(173, 61%, 77%);
     --Very-dark-cyan: hsl(183, 100%, 15%);
     --Darker-greyish-cyan: hsl(186, 14%, 43%);
     --Dark-greyish-cyan: hsl(184, 14%, 56%);
@@ -7,6 +8,8 @@
     --Lighter-greyish-cyan: hsl(189, 41%, 97%);
     --white: hsl(0, 0%, 100%);
     --main-bg: hsl(185, 41%, 84%);
+
+
 }
 
 * {
@@ -14,19 +17,20 @@
     padding: 0;
     box-sizing: border-box;
     border: none;
+    font-family: 'Space Mono', monospace;
 }
 
 
 
 body {
     background-color: var(--main-bg);
-    font-family: 'Space Mono', monospace;
 }
 
 .tip-calculator-header {
     text-align: center;
     padding: 3rem 0;
 }
+
 .tip-calculator-header--img {
     transform: scale(1.2);
 }
@@ -42,6 +46,118 @@ h1 {
     display: none;
 }
 
+.input__section {
+    margin-top: 0.5em;
+}
+
+.userInput__bill__input--amount,
+.userInput__peopleCount__select--input {
+    width: 100%;
+    background-color: var(--Lighter-greyish-cyan);
+    padding: 0.4em 1em;
+    text-align: right;
+    border-radius: 0.5rem;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.userInput__bill__input--img,
+.userInput__peopleCount__select--img {
+    position: relative;
+    top: -2.3em;
+    left: 1.5em;
+}
+
+.userInput__selectTip__btns--percent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1em 0;
+}
+
+.percent__btn,
+.custom-percentage {
+    width: calc((100% - 0.8rem) / 2);
+    margin-bottom: 0.8rem;
+    padding: 0.5em;
+    background-color: var(--Very-dark-cyan);
+    color: var(--white);
+    font-size: 1.5em;
+    font-weight: 700;
+    border-radius: 0.5rem;
+}
+
+.percent__btn:hover {
+    background-color: var(--Light-strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+
+.percent__btn--selected {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.custom-percentage {
+    background-color: var(--Lighter-greyish-cyan);
+    color: var(--Very-dark-cyan);
+    text-align: center;
+}
+
+.custon-percentage:placeholder {
+    color: var(--Darker-greyish-cyan);
+}
+
+
+.no-warning {
+    display: none;
+}
+
+.output {
+    background-color: var(--Very-dark-cyan);
+    color: var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.output__amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-weight: 700;
+}
+
+.output--person {
+    display: block;
+    font-weight: 400;
+    color: var(--Light-greyish-cyan);
+}
+
+.output--sum {
+    font-size: 2.5em;
+    color: var(--Strong-cyan);
+}
+
+.output__reset--btn {
+    width: 100%;
+    padding: 0.7em 0;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    border-radius: 0.5em;
+    margin-top: 1em;
+}
+
+.output__reset--btn:hover {
+    background-color: var(--Light-strong-cyan);
+}
+
+.output__reset--hidden {
+    display: none;
+}
 
 @media screen and (min-width: 1000px) {
     main {
@@ -70,11 +186,11 @@ h1 {
 }
 
 .attribution a {
-    color: var(--dark-cyan);
+    color: var(--Very-dark-cyan);
     text-decoration: none;
 }
 
 .attribution a:hover {
-    color: var(--dark-cyan);
+    color: var(--Strong-cyan);
     font-weight: 600;
 }

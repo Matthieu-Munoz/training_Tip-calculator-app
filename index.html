@@ -18,66 +18,66 @@
     <header class="tip-calculator-header">
       <!-- for SEO -->
       <h1>Splitter</h1>
-      <img src="images/logo.svg" class="tip-calculator-header--img" alt="Splitter Logo" id="logo">
+      <a href="#"><img src="images/logo.svg" class="tip-calculator-header--img" alt="Splitter Logo" id="logo"></a>
     </header>
     <main>
       <form>
         <div class="userInput">
           <div class="userInput__bill">
-            <label for="bill">Bill</label>
+            <label for="bill" class="">Bill</label>
             <div class="userInput__bill__input">
+              <input type="number" class="userInput__bill__input--amount" id="bill" name="bill" placeholder="0">
               <img src="images/icon-dollar.svg" class="userInput__bill__input--img" alt="dollar icon"
                 aria-hidden="true">
-              <input type="number" class="userInput__bill__input--amount" id="bill" name="bill" placeholder="0">
             </div>
           </div>
           <fieldset class="userInput__selectTip">
-            <legend>Select tip</legend>
-            <div class="userInput__selectTip__btns">
-              <div class="puserInput__selectTip__btns--percent">
-                <button type="button" class="percent--btn" id="btn_5" aria-label="add-5-percentage">
+            <legend class="input__title">Select tip %</legend>
+              <div class="userInput__selectTip__btns--percent input__section">
+                <button type="button" class="percent__btn" id="btn_5" aria-label="add-5-percentage">
                   5%
                 </button>
-                <button type="button" class="percent--btn" id="btn_10" aria-label="add-10-percentage">
+                <button type="button" class="percent__btn" id="btn_10" aria-label="add-10-percentage">
                   10%
                 </button>
-                <button type="button" class="percent--btn" id="btn_15" aria-label="add-15-percentage">
+                <button type="button" class="percent__btn percent__btn--selected" id="btn_15" aria-label="add-15-percentage">
                   15%
                 </button>
-                <button type="button" class="percent--btn" id="btn_25" aria-label="add-25-percentage">
+                <button type="button" class="percent__btn" id="btn_25" aria-label="add-25-percentage">
                   25%
                 </button>
-                <button type="button" class="percent--btn" id="btn_50" aria-label="add-50-percentage">
+                <button type="button" class="percent__btn" id="btn_50" aria-label="add-50-percentage">
                   50%
                 </button>
-                <input id="custom" class="percent--btn custom-percentage" type="number" max="100" placeholder="Custom"
+                <input id="custom" class="custom-percentage" type="number" max="100" placeholder="Custom"
                   aria-label="enter-custom-input" />
               </div>
-            </div>
           </fieldset>
           <div class="userInput__peopleCount">
-            <label for="number-people" class="userInput__peopleCount__label">
+            <label for="number-people" class="userInput__peopleCount__label input__title">
               Number of people
               <span id="userInput__peopleCount__label--warning" class="warning no-warning">Can't be zero</span>
             </label>
-            <div class="userInput__peopleCount__select">
+            <div class="userInput__peopleCount__select input__section">
+              <input type="number" name="number-people" class="userInput__peopleCount__select--input" id="number-people"
+                placeholder="0" aria-label="enter-number-of-people" required aria-required="true" min="0" max="100">
               <img src="images/icon-person.svg" class="userInput__peopleCount__select--img" alt="person icon"
                 aria-hidden="true">
-              <input type="number" name="number-people" class="userInput__peopleCount__select--input" id="number-people"
-                placeholder="0" min="0" max="100">
             </div>
           </div>
         </div>
-        <div id="output" aria-live="polite">
-          <div class="output__amount__tip">
-            <p class="output__amount__tip--person">Tip Amount<br><span>/ person</span></p>
-            <p class="output__amount__tip--sum">$0.00</p>
+        <div class="output" aria-live="polite">
+          <div class="output__amount amount--tip">
+            <p class="output__amount__tip--person output__title--person">Tip Amount<span class="output--person">/
+                person</span></p>
+            <p class="output__amount__tip output--sum">$0.00</p>
           </div>
-          <div class="output__amount__total">
-            <p class="output__amount__total--person">Total<br><span>/ person</span></p>
-            <p class="output__amount__total--sum">$0.00</p>
+          <div class="output__amount amount--total">
+            <p class="output__amount__total--person output__title--person">Total<span class="output--person">/
+                person</span></p>
+            <p class="output__amount__total output--sum">$0.00</p>
           </div>
-          <input type="reset" class="output__reset" value="Reset" id="reset" name="reset">
+          <input type="reset" class="output__reset--btn" value="Reset" id="reset" name="reset">
           <label for="reset" class="output__reset--hidden">Reset</label>
         </div>
       </form>
