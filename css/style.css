@@ -40,7 +40,7 @@ main {
     padding: 2rem;
     background-color: var(--white);
     border-radius: 2rem;
-}
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
 
 h1 {
     display: none;
